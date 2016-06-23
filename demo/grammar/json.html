@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>json demo</title>
+		<script src='../../build/react.js'></script>
+		<script src='../../build/react-dom.js'></script>
+		<script src='../../build/browser.min.js'></script>
+		<script type="text/javascript">
+			var json = {'name':'zhangp','age':24,'gender':'f'}
+			// for(var k in json){
+			// 	alert(json[k])
+			// }
+		</script>
+	</head>
+	<body>
+		<div id='myDiv'></div>
+		<script type="text/babel">
+			ReactDOM.render(
+				<div>
+					{
+						 for(i in json){
+							<h1> {json[i]}</h1>
+						}
+					}
+				</div>,document.getElementById('myDiv')
+			);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>component simple demo</title>
+		<script src='../../build/react.js'></script>
+		<script src='../../build/react-dom.js'></script>
+		<script src='../../build/browser.min.js'></script>
+	</head>
+	<body>
+		<div id='myDiv',type='_div'></div>
+		<script type="text/babel">
+			var HelloMessage = React.createClass({
+				render:function(){
+					return 	
+					<h1>
+							Hello {this.props.name}<br />
+							<input type="text" name='_txt' /><br />
+							<input type="button" name="_btn" value="submit" />
+						</h1>;
+				}
+			});
+			ReactDOM.render(
+				<HelloMessage name='Lee' />,document.getElementById('myDiv')
+			);
+		</script>
+	</body>
+</html>
+<!-- 
+上面代码中，变量 HelloMessage 就是一个组件类。模板插入 <HelloMessage /> 时，会自动生成 HelloMessage 的一个实例（下文的"组件"都指组件类的实例）。所有组件类都必须有自己的 render 方法，用于输出组件。
+对于所有的标签必须要关闭，否则会报错
+ -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSX Grammar</title>
+		<!-- 注意：此处引用js文件，不可使用<script src='.....'/>，这种单标签形式 -->
+		<script src='../build/react.js'></script>
+		<script src='../build/react-dom.js'></script>
+		<script src='../build/browser.min.js'></script> 
+	</head>
+	<body>
+		<div id='container'></div>
+		<div id='arr'></div>
+		<div id="json"></div>
+		<script type="text/babel">
+			var names = ['Zhangp','Fengzhw','Gaohn'];
+			ReactDOM.render(
+				<div>
+					{
+						names.map(function (name){
+							return  <div>'hello ' +{name}</div>
+						})
+					}
+				</div>,
+				document.getElementById('container')
+			);
+
+			var arr = [<h1>arr0</h1>,<h1>arr1</h1>]
+			ReactDOM.render(
+				
+				<h1>{arr}</h1>,document.getElementById('arr')
+			);
+
+			var json = {'name':'zhangs','age':25};
+			ReactDOM.render(
+				<div>
+					{
+						json.map(function(key){
+							return <div>{key} </div>
+						})
+					}
+				</div>,
+				document.getElementById('json')
+			);
+		</script>
+	</body>
+</html>
+
+<!-- 上文arr数组外面必须套一层标签 -->
+<!-- 
+上面代码体现了 JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。 -->

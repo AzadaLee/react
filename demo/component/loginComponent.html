@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>this is login component</title>
+		<script src='../../build/react.js'></script>
+		<script src='../../build/react-dom.js'></script>
+		<script src='../../build/browser.min.js'></script>
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<body>
+		<div id='container'>
+			<div id='login'></div>
+		</div>
+		<script type="text/babel">
+			var LoginComponent = React.createClass({
+				render:function(){
+					return 	(
+							<div>
+								name:<input type="text" name="name" /><br/>
+								password:<input type="password" name="pwd" /><br />
+								<input type="button" name="sub" value="submit" />
+							</div>
+						);
+				}
+			});
+			ReactDOM.render(
+				<LoginComponent name='loginComponent' />,
+				document.getElementById('login')
+			);
+		</script>
+	</body>
+</html>

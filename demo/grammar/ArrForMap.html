@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>arr for map</title>
+	</head>
+		<!-- <script src='../build/react.js'></script>
+		<script src='../build/react-dom.js'></script>
+		<script src='../build/browser.min.js'></script> -->
+		<!-- <script src='../react.js'></script>
+		<script src='../react-dom.js'></script>
+		<script src='../browser.min.js'></script> -->
+		<script src='../../build/react.js'></script>
+		<script src='../../build/react-dom.js'></script>
+		<script src='../../build/browser.min.js'></script>
+	<body>
+		<div id='myDiv'></div>
+		<script type="text/babel">
+			var arr = ['zhangp','fengzw','caojl'];
+			ReactDOM.render(
+				<div>
+					{
+						arr.map(function(index){
+							return <div>{index}</div>
+						})
+					}
+				</div>,document.getElementById('myDiv')
+			);
+		</script>
+	</body>
+</html>
+<!-- 
+注意点：使用ReactDOM.render('content',dom)方法时，第一个参数的使用特别要注意每个操作的外层需要加标签进行嵌套 -->

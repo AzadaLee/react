@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>arr</title>
+		<script src='../../build/react.js'></script>
+		<script src='../../build/react-dom.js'></script>
+		<script src='../../build/browser.min.js'></script>
+		<script type="text/javascript">
+			var arr = ['zhangp','fengzw','caojl'];
+		</script>
+	</head>
+	<body>
+		<div id='myDiv'></div>
+		<script type="text/babel">
+			ReactDOM.render(
+				<div>
+					{arr}
+				</div>,
+				document.getElementById('myDiv')
+			);
+		</script>
+	</body>
+</html>

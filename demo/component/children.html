@@ -14,11 +14,11 @@
 		render: function() {
 		    	return (
 		      		<ol>
-		      		{
-		        			React.Children.map(this.props.children, function (child) {
-		          				return <li>{child}</li>;
-		       			})
-		      		}
+			      		{
+			        			React.Children.map(this.props.children, function (value) {
+			          				return <li>{value}</li>;
+			       			})
+			      		}
 		      		</ol>
 		    	);
 		  }
